@@ -1,10 +1,3 @@
-include("system.jl")
-include("base.jl")
-
-using DynamicalSystems
-using LinearAlgebra
-using PrettyTables
-using NLsolve
 
 
 begin

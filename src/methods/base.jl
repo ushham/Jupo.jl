@@ -1,10 +1,3 @@
-include("system.jl")
-include("floquet.jl")
-
-using DynamicalSystems
-using Distances
-import JSON
-
 
 """
     A `UPO_sol` struct that represents a periodic orbit (PO).

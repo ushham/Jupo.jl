@@ -1,11 +1,3 @@
-include("system.jl")
-include("base.jl")
-include("newton_method.jl")
-
-using DynamicalSystems
-using LinearAlgebra
-using PrettyTables
-
 
 """
     Saves 

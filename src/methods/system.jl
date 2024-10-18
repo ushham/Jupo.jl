@@ -1,5 +1,3 @@
-include("../systems/toy_systems.jl")
-include("../systems/MAOLAM2x2.jl")
 
 struct System{T<:AbstractFloat}
     name::String

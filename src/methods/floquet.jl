@@ -1,4 +1,3 @@
-using DynamicalSystems
 
 """
     Calculates the Floquet Multipliers of an periodic orbit.

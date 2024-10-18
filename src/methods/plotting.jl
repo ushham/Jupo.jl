@@ -1,10 +1,5 @@
-include("base.jl")
 
-using Plots
-using DynamicalSystems
-
-
-function plot_upo(
+function plot(
     ls::CoupledODEs, 
     upo::UPO_sol; 
     axis::Union{Tuple{Int64, Int64}, Tuple{Int64, Int64, Int64}}=(1, 2),
@@ -16,10 +11,10 @@ function plot_upo(
     else
         plot(traj[:, axis[1]], traj[:, axis[2]])
     end
-    return nothing
+    return plot!()
 end
 
-function plot_upo!(
+function plot!(
     ls::CoupledODEs, 
     upo::UPO_sol; 
     axis::Union{Tuple{Int64, Int64}, Tuple{Int64, Int64, Int64}}=(1, 2),
@@ -32,5 +27,5 @@ function plot_upo!(
     else
         plot!(traj[:, axis[1]], traj[:, axis[2]])
     end
-    return nothing
+    return plot!()
 end
