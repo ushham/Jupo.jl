@@ -1,4 +1,6 @@
 using Jupo
+using DynamicalSystems
+using Plots
 
 lorenz_system = lorenz
 
@@ -7,7 +9,7 @@ ics = guess_ic(lorenz; max_period=5.)
 
 upos = []
 for ic_try in ics
-    push!(upos, find_upo_nm(lorenz_system, ic_on_attractor))
+    push!(upos, find_upo_nm(lorenz_system, ic_try))
 end
 
 # To plot the attractor, we create a long transient
@@ -16,8 +18,8 @@ traj, t = trajectory(ls, 1000, rand(3), Δt=0.01)
 plot(traj[:, 1], traj[:, 2], lc=:lightgrey)
 
 # Plot all upos
-for a in app
-    plot!(lorenz, a)
+for u in upos
+    plot!(lorenz, u)
 end
 
 plot!()
@@ -36,7 +38,7 @@ plot!()
 
 upo_exact = find_upo_nm(
     lorenz, 
-    ics[2];
+    upos[2];
     print_report=true, 
     iterations=100,
     damping_max_steps=200,
