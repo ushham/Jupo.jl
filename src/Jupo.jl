@@ -18,7 +18,8 @@ using LinearAlgebra:
     I,
     eigvals,   
     svd,
-    dot
+    dot,
+    ⋅
 
 using Distances:
     norm
@@ -26,7 +27,7 @@ using Distances:
 using NLsolve:
     nlsolve
 
-import JSON
+using JSON
 using PrettyTables:
     pretty_table
 

@@ -1,6 +1,6 @@
 
 """
-    Saves 
+    Saves UPO with a generated filename
 """
 function continuation_save(upo::UPO_sol; folder::Union{String, Nothing})
     name = upo.system.name * "_" * string(round(upo.period, sigdigits=5))

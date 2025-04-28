@@ -837,7 +837,7 @@ function find_upo_nm(
         print_report::Bool=false, 
         bounds::Union{Nothing, Dict}=nothing, 
         min_norm::T=1e-10,
-        error_flex::T=1.,
+        error_flex::T=2.,
         damping::Bool=true,
         damping_α::T=0.9,
         damping_c::T=1.,
