@@ -8,7 +8,7 @@ This library accompanies the study currently under review:
 
 Hamilton, O., Demaeyer, J., Crucifix, M. & Vannitsem, S. (2025) Using Unstable Periodic Orbits to Understand Blocking Behaviour in a Low Order Land-Atmosphere Model [under review] [https://arxiv.org/abs/2503.02808](https://arxiv.org/abs/2503.02808)
 
-It is planned to add this library to [ChaosTools.jl](https://github.com/JuliaDynamics/ChaosTools.jl), see issue: 
+It is planned to improve this library and then add to [ChaosTools.jl](https://github.com/JuliaDynamics/ChaosTools.jl), see [issue 347](https://github.com/JuliaDynamics/ChaosTools.jl/issues/347).
 
 ### Examples
 Here are some of the UPOs of the Lorenz 63 system:![Lorenz63_upos](examples/lrz_upos/lorenz_upos.png)
