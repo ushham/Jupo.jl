@@ -12,6 +12,6 @@ using Jupo
         x = upo = find_upo_nm(maolam_2x2, x_ic; min_norm=1e-10, damping_α=0.5, tensor_auto=true)
 
         @test x isa UPO_sol
-        @test x.period ≈ 38.78977497694325
+        @test abs(x.period - 38.78977497694325) < 1e-8
     end
 end

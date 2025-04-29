@@ -1,0 +1,14 @@
+[deps]
+Aqua = "4c88cf16-eb10-579e-8560-4a9242c79595"
+Jupo = "8f244b7b-1faa-43f2-9263-7277bb914622"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[compat]
+Aqua = "0.8.11"
+julia = "1.6.7"
+Distances = "0.10.11"
+DynamicalSystems = "3.3.22"
+JSON = "0.21.4"
+NLsolve = "4.5.1"
+Plots = "1.40.8"
+PrettyTables = "2.4.0"
