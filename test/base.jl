@@ -3,6 +3,10 @@ using Jupo
 
 @testset "base api" begin
     using DynamicalSystems
+    using Jupo:
+        integrate_tgls,
+        integrate_tgls!
+
 
     @inbounds function lorenz_rule!(du, u, p, t)
         σ, r, b = p
@@ -41,6 +45,12 @@ using Jupo
         lrz_ode, lrz_tds = generate_ds(lorenz_test)
         @test lrz_ode isa CoupledODEs
         @test lrz_tds isa TangentDynamicalSystem
+    end
+
+    @testset "integrators" begin
+        lrz_ode, lrz_tds = generate_ds(lorenz_test)
+        @test integrate_tgls(lrz_tds, rand(3)) isa Tuple{Vector, Matrix}
+        @test integrate_tgls!(lrz_tds, rand(3), rand(3), 1., ones(3, 3)) isa Matrix
     end
 end
 

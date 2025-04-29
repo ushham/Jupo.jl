@@ -51,7 +51,7 @@ include("methods/plotting.jl")
 
 export System, SystemDef
 export lorenz, maolam_2x2
-export generate_ode, generate_ds, upo_to_dict, dict_to_upo, save_upo, open_upos
+export generate_ode, generate_ds, upo_to_dict, dict_to_upo, save_upo, open_upos, UPO_sol
 export continue_upo
 export floquet_multipliers, floquet_exponents
 export filter_ic_guesses, guess_ic
