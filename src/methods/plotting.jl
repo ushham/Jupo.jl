@@ -19,6 +19,10 @@ function plot(
     kwargs...
     ) where {T<:Integer}
     traj, t = trajectory(sys, upo.period, upo.ic, Δt=Δt)
+
+    # add first point to last point
+    push!(traj, traj[1])
+
     if length(axis) == 3
         plot(traj[:, axis[1]], traj[:, axis[2]], traj[:, axis[3]], kwargs...)
     else
@@ -51,6 +55,10 @@ function plot(
     ls = generate_ode(sys)
 
     traj, t = trajectory(ls, upo.period, upo.ic, Δt=Δt)
+
+    # add first point to last point
+    push!(traj, traj[1])
+
     if length(axis) == 3
         plot(traj[:, axis[1]], traj[:, axis[2]], traj[:, axis[3]], kwargs...)
     else
@@ -80,6 +88,10 @@ function plot!(
     )  where {T<:Integer}
 
     traj, t = trajectory(sys, upo.period, upo.ic, Δt=Δt)
+
+    # add first point to last point
+    push!(traj, traj[1])
+
     if length(axis) == 3
         plot!(traj[:, axis[1]], traj[:, axis[2]], traj[:, axis[3]], kwargs...)
     else
@@ -111,6 +123,10 @@ function plot!(
     ls = generate_ode(sys)
 
     traj, t = trajectory(ls, upo.period, upo.ic, Δt=Δt)
+
+    # add first point to last point
+    push!(traj, traj[1])
+    
     if length(axis) == 3
         plot!(traj[:, axis[1]], traj[:, axis[2]], traj[:, axis[3]], kwargs...)
     else
