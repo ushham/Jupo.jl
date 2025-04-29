@@ -2,7 +2,7 @@ using Test
 using Jupo
 
 @testset "quality_check" begin
-    using Aqua, Documenter
+    using Aqua
     ignore_deps = [:LinearAlgebra, :Test, :Plots]
     Aqua.test_all(Jupo;
         deps_compat=(
