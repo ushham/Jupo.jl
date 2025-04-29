@@ -198,8 +198,8 @@ end
 """
 function generate_ode(
     sys::System; 
-    params::Union{Nothing, Vector{T}}=nothing
-    )::CoupledODEs where {T<:AbstractFloat}
+    params=nothing
+    )::CoupledODEs
     if isnothing(params)
         params = sys.p
     end
@@ -220,8 +220,8 @@ end
 """
 function generate_ds(
     sys::System; 
-    params::Union{Nothing, Vector{T}}=nothing
-    ) where {T<:AbstractFloat}
+    params=nothing
+    )
     ls = generate_ode(sys; params=params)
     tds = TangentDynamicalSystem(ls, J=sys.jac, Q0=Matrix(1.0I, sys.ndim, sys.ndim))
 

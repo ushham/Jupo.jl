@@ -3,9 +3,9 @@ using Jupo
 
 
 # multiple dispatch part failing
-# @testset "code quality" begin
-#     include("quality_check.jl")
-# end
+@testset "code quality" begin
+    include("quality_check.jl")
+end
 
 
 @testset "Base" begin
